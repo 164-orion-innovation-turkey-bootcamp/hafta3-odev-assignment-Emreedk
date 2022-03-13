@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-[![Odev3.gif](https://s7.gifyu.com/images/Odev3.gif)](https://gifyu.com/image/SMAZ3)
+[![Odev3.md.gif](https://s7.gifyu.com/images/Odev3.md.gif)](https://gifyu.com/image/SMAZ3)
 
 ## Development server
 
