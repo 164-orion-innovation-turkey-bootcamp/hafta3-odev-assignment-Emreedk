@@ -1,0 +1,30 @@
+.text {
+  margin-left: 15px;
+  padding: 10px 14px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(112, 108, 108);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  flex-direction: column;
+}
+
+.login-submit {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  margin: 5rem auto;
+  font-size: 20px;
+  min-width: 1px;
+  padding: 0.1rem;
+  transition: 250ms background ease-in;
+  &:hover,
+  &:focus {
+    background: white;
+    color: black;
+    transition: 250ms background ease-in;
+  }
+}

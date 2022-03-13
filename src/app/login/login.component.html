@@ -1,0 +1,80 @@
+<form class="login-form" [formGroup]="loginForm" (submit)="onSubmit()">
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+  </p>
+
+  <input
+    type="text"
+    class="login-username"
+    autofocus="true"
+    placeholder="Email"
+    [formControlName]="'email'"
+  />
+  <span
+    class="text-danger"
+    *ngIf="
+      loginForm.get('email')!.hasError('required') &&
+      loginForm.get('email').touched
+    "
+    >email is required
+  </span>
+  <span
+    class="text-danger"
+    *ngIf="
+      loginForm.get('email')!.hasError('email') &&
+      loginForm.get('email').touched
+    "
+    >please enter an email address.
+  </span>
+  <span class="text-danger" *ngIf="errorMessage">{{ errorMessage }} </span>
+  <input
+    type="password"
+    class="login-password"
+    placeholder="Password"
+    [formControlName]="'password'"
+  />
+  <span
+    class="text-danger"
+    *ngIf="
+      loginForm.get('password')!.hasError('required') &&
+      loginForm.get('password').touched
+    "
+    >password is required
+  </span>
+
+  <button class="login-submit" type="submit">Login</button>
+</form>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div>
+
+<!-- <div class="color">
+  <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <p>
+      <label for="email">Email</label>
+      <input type="text" id="email" [formControlName]="'email'" />
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" id="password" [formControlName]="'password'" />
+    </p>
+    <p>
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </p>
+  </form>
+</div> -->
+<!-- <button type="button" class="btn btn-warning" (click)="get()">get</button> -->
+
+<!-- <span
+    class="text-danger"
+    *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
+    >doldur burayı
+  </span> -->

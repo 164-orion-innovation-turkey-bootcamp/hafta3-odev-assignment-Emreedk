@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "user": {
+        "email": "emreedk@gmail.com",
+        "password": "aA1234",
+        "rePassword": "aA1234"
+      },
+      "id": 3
+    },
+    {
+      "user": {
+        "email": "emre@emre.com",
+        "password": "Emre123"
+      },
+      "id": 4
+    }
+  ]
+}

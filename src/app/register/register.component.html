@@ -1,0 +1,79 @@
+<form class="login-form" [formGroup]="registerForm" (submit)="onSubmit()">
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+  </p>
+  <input
+    type="text"
+    class="login-username"
+    autofocus="true"
+    placeholder="Email"
+    [formControlName]="'email'"
+  />
+  <span
+    class="text-danger"
+    *ngIf="
+      registerForm.get('email')!.hasError('required') &&
+      registerForm.get('email').touched
+    "
+    >email is required
+  </span>
+  <span
+    class="text-danger"
+    *ngIf="
+      registerForm.get('email')!.hasError('email') &&
+      registerForm.get('email').touched
+    "
+    >please enter an email address.
+  </span>
+  <input
+    type="password"
+    class="login-username"
+    autofocus="true"
+    placeholder="Password"
+    [formControlName]="'password'"
+  />
+  <span
+    class="text-danger"
+    *ngIf="
+      registerForm.get('password')!.hasError('required') &&
+      registerForm.get('password').touched
+    "
+    >password is required
+  </span>
+  <span
+    class="text-danger"
+    *ngIf="
+      registerForm.get('password')!.hasError('pattern') &&
+      registerForm.get('password').touched
+    "
+    >Your password must contain ('a-z' , 'A-Z' , '0-9') and must be a minimum of
+    6 digits.
+  </span>
+  <input
+    type="password"
+    class="login-password"
+    placeholder="rePassword"
+    [formControlName]="'rePassword'"
+  />
+  <span
+    class="text-danger"
+    *ngIf="
+      registerForm.get('rePassword')!.hasError('required') &&
+      registerForm.get('rePassword').touched
+    "
+    >rePassword is required
+  </span>
+  <span
+    class="text-danger"
+    *ngIf="passwordWarning && registerForm.get('rePassword').touched"
+  >
+    {{ passwordWarning }}
+  </span>
+
+  <button class="login-submit" type="submit">Register</button>
+</form>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div>
