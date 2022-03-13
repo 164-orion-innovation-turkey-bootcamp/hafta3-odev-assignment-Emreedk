@@ -1,6 +1,11 @@
 # Odev3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## You can watch the test stages by clicking the gif file.
+
+I used json-server for local API. "https://github.com/typicode/json-server"
+If you want to test the project, you can install the node_modules files with the npm install command and run the project with "ng serve".
+Then you should use the command "npx json-server --watch db.json" in a different terminal to run the json-server.
 
 [![Odev3.md.gif](https://s7.gifyu.com/images/Odev3.md.gif)](https://gifyu.com/image/SMAZ3)
 
